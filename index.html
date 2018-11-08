@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>MoneyLog Cloud JS</title>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+        <link rel="StyleSheet" href="css/core.css" type="text/css">
+        <link rel="shortcut icon" href="http://aurelio.net/moneylog/favicon.ico">
+
+        <link rel="apple-touch-icon" href="images/ios_icon.png" />
+        <link rel="apple-touch-startup-image" href="images/ios_splash.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Eu que fiz: xupisco@gmail.com -->
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-28986103-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        <script>
+        $(function() {
+            var CLIENT_ID = 'rlmh1dqth7ik8yk';
+            var APP_URL = 'https://xupisco.net/moneylog/';
+            //APP_URL = 'http://localhost:8080/';
+            var dbx = new Dropbox.Dropbox({ clientId: CLIENT_ID });
+            var authUrl = dbx.getAuthenticationUrl(APP_URL + 'moneylog.html');
+            document.getElementById('login_connect').href = authUrl;
+        })
+        </script>
+    </head>
+    <body>
+
+    <script type="text/javascript" src="js/commit_id.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#about-dropbox-version").html('<a href=http://github.com/xupisco/MoneyLog-Cloud/commit/' + commit_id + '>' + commit_id.slice(0, 6) + '</a>');
+    });
+    </script>
+    
+    <div id="login_container">
+        <div id="login_logo">
+            MoneyLog <span style="color: #2b97e9;">Cloud</span>
+        </div>
+        <div id="login_text">
+            <p style="margin-bottom: 13px;">Esta é a versão online do <a href="http://aurelio.net/moneylog/">MoneyLog</a>, que usa o <a href="https://www.dropbox.com/referrals/NTEwNDU4OQ">Dropbox</a> para ler e salvar os seus dados, assim você pode acessar de qualquer lugar!</p>
+    
+            <a href="{{ auth_url }}" id="login_connect" class="login_connect">Conectar</a>
+    
+            <p class="about">Será criada uma pasta "Moneylog Cloud" dentro da pasta /Apps do seu Dropbox. O aplicativo tem acesso somente aos arquivos dentro desta pasta. <a href="http://aurelio.net/moneylog/cloud/">Saiba mais...</a></p>
+        </div>
+        <p class="commit">Source: <a href="http://github.com/xupisco/MoneyLog-Cloud/" title="Alguma dúvida? Veja o source...">GitHub</a> (<a href="#" id="about-dropbox-version"></a>)</p>
+    </div>
+
+    </body>
+</html>

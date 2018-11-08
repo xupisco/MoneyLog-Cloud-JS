@@ -1,0 +1,1 @@
+var commit_id = '0x00000';

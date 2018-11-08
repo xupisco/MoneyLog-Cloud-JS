@@ -1,0 +1,168 @@
+body {
+    background-color: #222;
+    color: #fff;
+}
+
+#toolbar {
+    color: rgb(43, 43, 43);
+}
+
+@media screen and (max-width: 480px) {
+    #toolbar {
+        background-color: #ebebeb !important;
+    }
+}
+
+a.button:hover {
+    background-color: #deeaf3;
+}
+
+a.button.active:hover {
+    background-color: #2B97E9;
+}
+
+#tag-cloud-tags a:hover {
+    background-color: #deeaf3;
+}
+
+.report {
+    color: #ccc;
+    width: 80% !important;
+}
+
+.report th {
+    text-align: left;
+    background-color: inherit !important;
+}
+
+.report th:last-child {
+    text-align: right;
+}
+
+.report th:nth-child(2) {
+    text-align: right;
+}
+
+.report.overview th {
+    text-align: right;
+}
+
+.report.overview th:first-child {
+    text-align: left;
+}
+
+.report tr:first-child {
+    color: #fff;
+}
+
+.report tr:hover td,
+.report tr.future:hover td {
+    background-color: #2d2f31 !important;
+	color: #fff;
+}
+
+.report td {
+    border-color: #2d2f31;
+}
+
+td.row-count {
+    background-color: #222222 !important;
+}
+
+tr.totals, td.totals, #rows-summary {
+    background-color: #2d2f31 !important;
+}
+
+tr.selected, tr.selected:hover td, tr.selected .neg {
+    background-color: #3a4a56 !important;
+    color: #fff !important;
+}
+
+.future {
+    color: #4e4e4e !important;
+    background-color: inherit !important;
+}
+
+tr.future.selected, tr.future.selected:hover td, tr.future.selected .neg {
+    background-color: #3a4a56 !important;
+    color: #fff !important;
+}
+
+#editor-data-wrapper, #rows-summary, .button.active, a.button:active {
+    border-color: #2d2f31 !important;
+}
+
+#search-content {
+    padding: 0;
+}
+
+.widget-content {
+    background-color: #fafafa;
+    border: 0;
+}
+
+#toolbar input, #toolbar label, #toolbar select {
+    border: 0;
+    padding: 4px;
+}
+
+.button {
+    border: 0;
+    background-color: #ececec;
+}
+
+.pos {
+    color: #92da92;
+}
+
+.future span.pos {
+    color: #4d795f;
+}
+
+.future:hover span.pos {
+    color: #92da92;
+}
+
+.neg {
+    color: #ff7676;
+}
+
+.future span.neg {
+    color: #8b4b4b;
+}
+
+.future:hover span.neg {
+    color: #ff7676;
+}
+
+.posbar {
+    background-color: #396c92;
+}
+
+.negbar {
+    background-color: #ff7676;
+}
+
+table.chart {
+    border: 0;
+}
+
+table.chart tr:hover td {
+    background-color: transparent !important;
+    color: #fff;
+}
+
+th.row-count,
+table.daily th.balance:hover,
+table.overview th.percent:hover {
+	background-color: inherit !important;
+	color: inherit !important;
+}
+
+#chart-selector {
+    margin-bottom: 5px;
+    border: 0;
+    padding: 4px;
+    background-color: #2d2f31;
+    color: #bbb;
+}
